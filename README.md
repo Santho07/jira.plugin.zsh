@@ -2,7 +2,7 @@
 
 CLI support for JIRA & Git interaction
 
-**Note**: This plugin based on [the official Oh-My-ZSH Jira plugin](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira) mantained by [tresni](https://github.com/tresni). But it can recognize an issue code in a current Git branch name. See [below](#git-branch-recognition) for more information. 
+**Note**: This plugin based on [the official Oh-My-ZSH Jira plugin](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira) maintained by [tresni](https://github.com/tresni). But it can recognize an issue code in a current Git branch name. See [below](#git-branch-recognition) for more information. 
 
 ##  Description  ##
 
