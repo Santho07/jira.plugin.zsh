@@ -37,6 +37,24 @@ These calling forms are for developers' use, and may change at any time.
 jira dumpconfig   # displays the effective configuration
 ```
 
+##  Installation  ##
+
+Create folder inside your Oh-My-ZSH directory with custom plugins. Copy plugin files to it. Activate it in your ZSH config file. Usually it looks like:
+
+```
+cd ~/.oh-my-zsh/custom/plugins/
+git clone git@github.com:igoradamenko/jira.plugin.zsh.git jira
+vim ~/.zshrc
+```
+
+In opened file find array `plugins` and add `jira` in it (or add whole line if it does not exist):
+
+```
+plugins=(jira)
+```
+
+After that this custom plugin will override default `jira` plugin from Oh-My-ZSH.
+
 ##  Setup  ##
 
 The URL for your JIRA instance is set by `$JIRA_URL` or a `.jira_url` file.
