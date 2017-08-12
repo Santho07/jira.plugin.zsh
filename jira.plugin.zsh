@@ -104,11 +104,11 @@ function _jira_open_from_branch() {
     local branch=$(git rev-parse --abbrev-ref HEAD)
     local issue=$(echo $branch | sed -nE $JIRA_BRANCH_REGEX)
 
-    if [[ $issue ]]; then
+    if [[ -n $issue ]]; then
       issue="${jira_prefix}${issue}"
       local m=''
 
-      [[ $2 ]] && m=${2} || m=${1}
+      [[ -n $2 ]] && m=${2} || m=${1}
 
       _jira_open_issue $issue $m
     else
@@ -133,11 +133,11 @@ function _jira_open_issue() {
     local url="${jira_url}/browse/"
   fi
 
-  if [[ $url_fragment ]]; then
+  if [[ -n $url_fragment ]]; then
     echo "Add comment to issue #${issue}"
   else
     echo "Opening issue #${issue}"
   fi
-      
+
   open_command "${url}${issue}${url_fragment}"
 }
