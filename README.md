@@ -22,7 +22,7 @@ jira            # performs the default action
 jira git        # opens an issue related to the current Git branch
 jira git m      # opens an issue related to the current Git branch for adding a comment
 jira new        # opens a new issue
-jira dashboard  # opens your JIRA dashboard
+jira dashboard  # opens your JIRA dashboard (alias: `jira dash`)
 jira reported [username]  # queries for issues reported by a user
 jira assigned [username]  # queries for issues assigned to a user
 jira ABC-123    # opens an existing issue
