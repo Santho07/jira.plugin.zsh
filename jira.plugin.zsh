@@ -54,6 +54,7 @@ function jira() {
     echo "JIRA_RAPID_BOARD=$JIRA_RAPID_BOARD"
     echo "JIRA_DEFAULT_ACTION=$JIRA_DEFAULT_ACTION"
     echo "JIRA_BRANCH_REGEX=$JIRA_BRANCH_REGEX"
+    echo "JIRA_ISSUES_URL_PATH=$JIRA_ISSUES_URL_PATH"
   else
     # Anything that doesn't match a special action is considered an issue name
     local issue_arg=$action
@@ -127,8 +128,8 @@ function _jira_open_issue() {
     url_fragment="#add-comment"
   fi
 
-  if [[ "$JIRA_RAPID_BOARD" == "true" ]]; then
-    local url="${jira_url}/issues/"
+  if [[ ! -z "$JIRA_ISSUES_URL_PATH" ]]; then
+    local url="${jira_url}${JIRA_ISSUES_URL_PATH}"
   else
     local url="${jira_url}/browse/"
   fi

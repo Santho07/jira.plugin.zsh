@@ -80,6 +80,7 @@ echo "https://jira.atlassian.com" >> .jira-url
 * `$JIRA_RAPID_BOARD` - Set to `true` if you use Rapid Board
 * `$JIRA_DEFAULT_ACTION` - Action to do when `jira` is called with no arguments; defaults to `git`
 * `$JIRA_BRANCH_REGEX` — Extended regular expression (ERE) for recognizing an issue code in a Git branch name; defaults to `s/.+\-([A-Z0-9]+-[0-9]+)\-.+/\1/p`
+* `$JIRA_ISSUES_URL_PATH` - The path to use in issue urls (defaults to `/browse/`)
 
 ### Git branch recognition ###
 
