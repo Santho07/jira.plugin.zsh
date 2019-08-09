@@ -74,13 +74,13 @@ echo "https://jira.atlassian.com" >> .jira-url
 
 ###  Variables  ###
 
-* `$JIRA_URL` - Your JIRA instance's URL
-* `$JIRA_NAME` - Your JIRA username; used as the default user for `assigned`/`reported` searches
-* `$JIRA_PREFIX` - Prefix added to issue ID arguments
-* `$JIRA_RAPID_BOARD` - Set to `true` if you use Rapid Board
-* `$JIRA_DEFAULT_ACTION` - Action to do when `jira` is called with no arguments; defaults to `git`
-* `$JIRA_BRANCH_REGEX` — Extended regular expression (ERE) for recognizing an issue code in a Git branch name; defaults to `s/.+\-([A-Z0-9]+-[0-9]+)\-.+/\1/p`
-* `$JIRA_ISSUES_URL_PATH` - The path to use in issue urls (defaults to `/browse/`)
+* `$JIRA_URL` — Your JIRA instance's URL (e.g. `https://jira.mycompany.com`).
+* `$JIRA_NAME` — Your JIRA username; used as the default user for `assigned`/`reported` searches (e.g. `igoradamenko`).
+* `$JIRA_PREFIX` — Prefix added to issue ID arguments; useful if you always work with one project in JIRA and search for issues w/o project prefix (e.g. if `JIRA_PREFIX="PROJECT-"`, then `jira 123` opens issue PROJECT-123).
+* `$JIRA_RAPID_BOARD` — Set to `true` if you use Rapid Board; changes the URL that will be open when you run `jira dashboard`.
+* `$JIRA_ISSUES_URL_PATH` — The path to use in issues URLs; defaults to `/browse/` (i.e. if your issues have URLs like `https://jira.mycompany.com/browse/PROJECT-123` you don't need to change anything; but if you have something else instead of `/browse/`, you should to set it with this variable).
+* `$JIRA_DEFAULT_ACTION` — Action to do when `jira` is called with no arguments; defaults to `git`.
+* `$JIRA_BRANCH_REGEX` — Extended regular expression (ERE) for recognizing an issue code in a Git branch name; defaults to `s/.+\-([A-Z0-9]+-[0-9]+)\-.+/\1/p`.
 
 ### Git branch recognition ###
 
