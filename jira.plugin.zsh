@@ -56,6 +56,9 @@ function jira() {
     echo "JIRA_DEFAULT_ACTION=$JIRA_DEFAULT_ACTION"
     echo "JIRA_BRANCH_REGEX=$JIRA_BRANCH_REGEX"
     echo "JIRA_ISSUES_URL_PATH=$JIRA_ISSUES_URL_PATH"
+  elif [[ "$action" == "todo" ]]; then
+    echo "Opening your work"
+    open_command "${jira_url}/jira/your-work"
   else
     # Anything that doesn't match a special action is considered an issue name
     local issue_arg=$action
