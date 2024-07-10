@@ -3,7 +3,7 @@
 # See README.md for details
 
 : ${JIRA_DEFAULT_ACTION:=git}
-: ${JIRA_BRANCH_REGEX:='s/([A-Z]+\-+[0-9]*).+/\1/p'} ## Match XX-NUMBER
+: ${JIRA_BRANCH_REGEX:='s/([a-zA-Z0-9]+-[0-9]+).*/\1/p'} ## Match XX-NUMBER
 # : ${JIRA_BRANCH_REGEX:='s/.+\-([A-Z0-9]+-[0-9]+)\-.+/\1/p'}
 
 function jira() {
